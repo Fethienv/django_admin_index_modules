@@ -54,17 +54,23 @@ pip install django-admin-index-modules
 4. 1. using register_module(AdminModuleView, position="middle_top") methods:
 
 ```
-    site.register_module(VisitorsAdminModuleView, position="middle_top")
+    from django.contrib import admin
+
+    admin.site.register_module(VisitorsAdminModuleView, position="middle_top")
 ```
 
 4. 2. using @register_module(position="middle_top") decorator:
 
 ```
+    from django_admin_index_modules.admin import register_module
+
     @register_module(position="middle_top")
     class VisitorsAdminModuleView(AdminModuleView):
         ...
 ```
 
-5. 3. position keyword can take one of those values: top, middle_top, middle_bottom and bottom
+4. 3. position keyword can take one of those values: top, middle_top, middle_bottom and bottom
+
+5. create template file under "admin/modules/" than the name of the template file assigned to template_name propriety ex: "visitors.html"
 
 6. Visit http://127.0.0.1:8000/admin/ to see your widget module.
