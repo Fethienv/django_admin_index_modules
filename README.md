@@ -31,6 +31,8 @@ pip install django-admin-index-modules
 3. In admin.py file of any other app create ypur widget module like this:
 
 ```
+    from django_admin_index_modules.admin import AdminModuleView
+
     class VisitorsAdminModuleView(AdminModuleView):
 
         template_name = 'visitors.html'
