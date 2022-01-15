@@ -1,0 +1,4 @@
+include LICENSE
+include README.md
+recursive-include django_admin_index_modules/static *
+recursive-include django_admin_index_modules/templates *
